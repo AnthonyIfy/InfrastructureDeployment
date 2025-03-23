@@ -7,7 +7,7 @@ provider "aws" {
 
 
 resource "aws_s3_bucket" "example" {
-  bucket = "deploy-jenkins"
+  bucket = "deploytee-jenkins"
 
   lifecycle {
     prevent_destroy = false

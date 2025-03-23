@@ -4,7 +4,7 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "deploy-jenkins"
+    bucket = "deploytee-jenkins"
     key    = "deployesource.tfstate"
     region = "us-west-1"
   }

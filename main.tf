@@ -1,12 +1,12 @@
 provider "aws" {
-  region     = "us-east-1"
+  region     = "us-west-1"
 }
 
 terraform {
   backend "s3" {
-    bucket = "yusuf-jenkins"
-    key    = "newresource.tfstate"
-    region = "us-east-1"
+    bucket = "deploy-jenkins"
+    key    = "deploysource.tfstate"
+    region = "us-west-1"
   }
 }
 
@@ -104,7 +104,7 @@ resource "aws_instance" "foo" {
   subnet_id = aws_subnet.demo_subnet.id
   vpc_security_group_ids = [aws_security_group.allow_tls.id]
   availability_zone = "us-east-1a"
-  key_name = "devopskeypair"
+  key_name = "deployment"
   count = 5
 
   tags = {

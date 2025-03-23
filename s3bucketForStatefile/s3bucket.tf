@@ -1,16 +1,16 @@
 # configured aws provider with proper credentials
 provider "aws" {
-  region    = "us-east-1"
-  profile   = "yusuf"
+  region    = "us-west-1"
+  profile   = "asher"
 }
 
 
 
 resource "aws_s3_bucket" "example" {
-  bucket = "yusuf-jenkins"
+  bucket = "deploy-jenkins"
 
   lifecycle {
-    prevent_destroy = true
+    prevent_destroy = false
   }
 }
 
